@@ -9,8 +9,6 @@ Sequelize = require 'sequelize'
 
 #next stip change fs to loader-folder suppert yml file and json
 
-
-
 vPath      = '../model'
 module.exports = (aModel)->
   sequelize = new Sequelize('wmDBd', null, null, {
@@ -46,9 +44,4 @@ module.exports = (aModel)->
 
   Model = sequelize.define(aModel.toLowerCase(),vProperties)
   return Model
-  # sequelize.sync()
-  # .then ()->
-  #   return Model
-  # .catch (err)->
-  #   console.log("ERR:\n",err)
 
