@@ -9,7 +9,9 @@ Sequelize = require 'sequelize'
 
 #next stip change fs to loader-folder suppert yml file and json
 
-vPath      = '../model'
+
+
+vPath      =  path.join __dirname,'../model'
 module.exports = (aModel)->
   sequelize = new Sequelize('wmDBd', null, null, {
     dialect: 'sqlite',
@@ -44,4 +46,6 @@ module.exports = (aModel)->
 
   Model = sequelize.define(aModel.toLowerCase(),vProperties)
   return Model
+
+
 
